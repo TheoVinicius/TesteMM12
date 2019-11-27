@@ -32,10 +32,14 @@ export class TimerComponent implements OnInit {
         this.contagem = false;
         clearInterval(contagem);
       } else {
-        this.dias = Math.floor(difference / 86400);
-        this.horas = Math.floor(difference / 3600) % 24;
-        this.minutos = Math.floor(difference / 60) % 60;
-        this.segundos = Math.floor(difference % 60);
+        this.dias = (Math.floor(difference / 86400) < 10) ? '0' + Math.floor(difference / 86400) :
+          Math.floor(difference / 86400);
+        this.horas = (Math.floor(difference / 3600 % 24) < 10) ? '0' + (Math.floor(difference / 3600) % 24) :
+          (Math.floor(difference / 3600) % 24);
+        this.minutos = (Math.floor(difference / 60) % 60 < 10) ? '0' + (Math.floor(difference / 60) % 60) :
+          (Math.floor(difference / 60) % 60);
+        this.segundos = (Math.floor(difference % 60) < 10) ? '0' + Math.floor(difference % 60) :
+          Math.floor(difference % 60);
       }
     }, 1000);
   }
