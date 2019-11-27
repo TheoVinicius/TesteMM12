@@ -1,0 +1,26 @@
+<div class="divCenter">
+  <img src="../../assets/thumbnail.jpg" width="100%" style="object-fit: contain; margin: 0px;">
+  <div class="posicionamento" *ngIf="contagem">
+    <div class="coluna">
+      <div class="tempo">{{dias}}</div>
+      <div class="medidaTempo">DIAS</div>
+    </div>
+    <div class="divisor">•</div>
+    <div class="coluna">
+      <div class="tempo">{{horas}}</div>
+      <div class="medidaTempo">HORAS</div>
+    </div>
+    <div class="divisor">•</div>
+    <div class="coluna">
+      <div class="tempo">{{minutos}}</div>
+      <div class="medidaTempo">MINUTOS</div>
+    </div>
+    <div class="divisor">•</div>
+    <div class="coluna">
+      <div class="tempo">{{segundos}}</div>
+      <div class="medidaTempo">SEGUNDOS</div>
+    </div>
+  </div>
+  <div class="fimContagem" *ngIf="!contagem">
+    <p>Acabou a Espera!</p>
+  </div>
