@@ -42,6 +42,7 @@
   }
 
   .divisor {
+    user-select: none;
     display: inline-block;
     vertical-align: top;
     font-size: 3vw;
@@ -80,6 +81,11 @@
 }
 
 .coluna {
+  user-select: none;
   display: inline-block;
   margin: 0 2%;
+}
+
+.noSelect {
+  user-select: none;
 }
